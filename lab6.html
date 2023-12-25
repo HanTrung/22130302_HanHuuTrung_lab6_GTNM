@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tab Example</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        #menu-bar {
+            background-color: #333;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 50px;
+        }
+
+        #menu-bar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        #content {
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="menu-bar">
+        <a href="#" onclick="openTab('ex1.html')">Ex1</a>
+        <a href="#" onclick="openTab('ex2.html')">Ex2</a>
+    </div>
+
+    <div id="content">
+        <!-- Nội dung trang web sẽ được hiển thị ở đây -->
+    </div>
+
+    <script>
+        function openTab(tabName) {
+            // Load the content of the specified tab
+            fetch(tabName)
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById('content').innerHTML = html;
+                });
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Labs</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Times New Roman', Times, serif, sans-serif;
+           
+            flex-direction: column;
+            align-items: left;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .nav-main>li {
+            float: left;
+            margin-right: 15px;
+        }
+
+        .nav-main>li>a {
+            
+            font-size: 50px;
+            color: red;
+        }
+
+        .nav-main li {
+            position: relative;
+            list-style: none;
+        }
+
+        .nav-main li a {
+            padding: 10px;
+            line-height: 20px;
+            display: inline-block;
+        }
+
+        .nav-main .sub-menu {
+            display: none;
+            font-size: 30px;
+            position: absolute;
+            top: 0;
+            left: 100%;
+            width: 200px;
+            background-color: #eee;
+            padding: 10px 30px;
+        }
+
+        .nav-main li:hover > .sub-menu {
+            display: block;
+        }
+
+        .nav-main>li>.sub-menu {
+            top: 40px;
+            left: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <ul class="nav-main">
+            <li>
+                <a href="#">Labs</a>
+                <ul class="sub-menu">
+                    <li><a href="lab6.html">lab6</a></li>
+                    
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <div style="padding: 20px;">
+        <!-- Nội dung trang web của bạn sẽ ở đây -->
+    </div>
+
+</body>
+
+</html>
